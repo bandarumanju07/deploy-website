@@ -5,6 +5,8 @@ import { typeDefs } from "./schema.js";
 import { resolvers } from "./resolvers.js";
 
 const app = express();
+app.use(cors()); // Enable CORS for all routes
+
 const server = new ApolloServer({ typeDefs, resolvers });
 
 (async () => {
