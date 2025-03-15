@@ -3,6 +3,7 @@ import { ApolloServer } from "apollo-server-express";
 import sequelize from "./sequelize.js";
 import { typeDefs } from "./schema.js";
 import { resolvers } from "./resolvers.js";
+import cors from "cors";
 
 const app = express();
 app.use(cors()); // Enable CORS for all routes
